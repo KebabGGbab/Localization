@@ -29,7 +29,7 @@ If you use dependency injection, you can write your own extension to IServiceCol
 ```csharp
     public static class LocalizationExtensions
     {
-        public static IServiceCollection AddLocalizationWithResx(this ServiceCollection services)
+        public static IServiceCollection AddLocalizationWithResx(this IServiceCollection services)
         {
             ArgumentNullException.ThrowIfNull(services);
 
