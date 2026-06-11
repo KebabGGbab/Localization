@@ -88,6 +88,15 @@ namespace KebabGGbab.Localization.Samples.AvaloniaUI.Resources {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на This style.
+        /// </summary>
+        internal static string TextBlock_TestLocalization_Text {
+            get {
+                return ResourceManager.GetString("TextBlock_TestLocalization_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Current UI culture:.
         /// </summary>
         internal static string TextBlockCurrentUICulture {

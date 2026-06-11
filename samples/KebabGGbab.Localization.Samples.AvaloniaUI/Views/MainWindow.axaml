@@ -12,19 +12,19 @@
         x:Class="KebabGGbab.Localization.Samples.AvaloniaUI.MainWindow"
         Title="{l:Localization MainWindowTitle}">
 
-        <StackPanel Orientation="Vertical">
+    <StackPanel Orientation="Vertical">
         <Grid DataContext="{Binding Path=Settings}" ColumnDefinitions="auto, 200" RowDefinitions="auto, auto, auto">
 
             <TextBlock Grid.Row="0" Grid.Column="0"
-                        Text="{l:Localization TextBlockCurrentUICulture}" />
+                       Text="{l:Localization TextBlockCurrentUICulture}" />
             <TextBlock Grid.Row="0" Grid.Column="1"
-                        Text="{Binding Path=CurrentUICulture}" />
+                       Text="{Binding Path=CurrentUICulture}" />
 
             <TextBlock Grid.Row="1" Grid.Column="0"
-                        Text="{l:Localization TextBlockSelectedUICulture}" />
+                       Text="{l:Localization TextBlockSelectedUICulture}" />
             <ComboBox Grid.Row="1" Grid.Column="1"
-                        ItemsSource="{Binding Path=SupportedUICultures}"
-                        SelectedItem="{Binding Path=SelectedUICulture}" />
+                      ItemsSource="{Binding Path=SupportedUICultures}"
+                      SelectedItem="{Binding Path=SelectedUICulture}" />
 
             <Button Grid.Row="2" Grid.ColumnSpan="2"
                     Content="{l:Localization ButtonApply}"
@@ -34,7 +34,7 @@
 
         <ContentControl Content="{Binding Path=User}" ContentTemplate="{StaticResource UserName}" />
         <views:MyUserControl />
-                CommandParameter="{Binding Path=SelectedUICulture}" />
+        <TextBlock Classes="test-localization" />
 
     </StackPanel>
 

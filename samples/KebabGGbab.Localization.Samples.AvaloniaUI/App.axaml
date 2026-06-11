@@ -6,6 +6,8 @@
 
     <Application.Styles>
         <FluentTheme />
+
+        <StyleInclude Source="avares://KebabGGbab.Localization.Samples.AvaloniaUI/Assets/Styles/TextBlock.axaml" />
     </Application.Styles>
 
     <Application.Resources>
