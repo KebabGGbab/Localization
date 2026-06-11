@@ -1,7 +1,4 @@
-﻿using System;
-using Avalonia;
-
-namespace KebabGGbab.Localization.Samples.AvaloniaUI
+﻿namespace KebabGGbab.Localization.Samples.AvaloniaUI
 {
     internal class Program
     {

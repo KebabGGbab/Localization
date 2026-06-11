@@ -1,8 +1,4 @@
-﻿using System.Globalization;
-using KebabGGbab.Localization.Samples.AvaloniaUI.Resources;
-using Microsoft.Extensions.DependencyInjection;
-
-namespace KebabGGbab.Localization.Samples.AvaloniaUI.Service.Localization
+﻿namespace KebabGGbab.Localization.Samples.AvaloniaUI.Service.Localization
 {
     public static class LocalizationExtensions
     {

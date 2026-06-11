@@ -1,9 +1,6 @@
-using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 using KebabGGbab.Localization.Samples.AvaloniaUI.Service.Localization;
-using KebabGGbab.Localization.Samples.Shared.ViewModels;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace KebabGGbab.Localization.Samples.AvaloniaUI
 {
