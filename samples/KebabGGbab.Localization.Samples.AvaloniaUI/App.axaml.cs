@@ -6,7 +6,8 @@ namespace KebabGGbab.Localization.Samples.AvaloniaUI
 {
     public partial class App : Application
     {
-        private readonly IServiceProvider _serviceProvider;
+        // null может быть только в Design
+        private readonly IServiceProvider _serviceProvider = null!;
 
         public override void Initialize()
         {
@@ -15,6 +16,11 @@ namespace KebabGGbab.Localization.Samples.AvaloniaUI
 
         public App()
         {
+            if (Design.IsDesignMode)
+            {
+                return;
+            }
+            
             ServiceCollection services = new();
             ConfigureServices(services);
             _serviceProvider = services.BuildServiceProvider();
@@ -31,6 +37,13 @@ namespace KebabGGbab.Localization.Samples.AvaloniaUI
         {
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
             {
+                if (Design.IsDesignMode)
+                {
+                    desktop.MainWindow = new MainWindow();
+
+                    return;
+                }
+
                 desktop.MainWindow = _serviceProvider.GetRequiredService<MainWindow>();
             }
 
