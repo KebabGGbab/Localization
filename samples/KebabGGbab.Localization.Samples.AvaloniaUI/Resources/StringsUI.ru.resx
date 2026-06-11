@@ -123,6 +123,9 @@
   <data name="MainWindowTitle" xml:space="preserve">
     <value>Привет, окно!</value>
   </data>
+  <data name="MyUserControl.TextBlock.Text" xml:space="preserve">
+    <value>MyUserControl - это мой  пользовательский элемент</value>
+  </data>
   <data name="TextBlockCurrentUICulture" xml:space="preserve">
     <value>Текущая культура UI:</value>
   </data>

@@ -79,6 +79,15 @@ namespace KebabGGbab.Localization.Samples.AvaloniaUI.Resources {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на MyUserControl is my user control.
+        /// </summary>
+        internal static string MyUserControl_TextBlock_Text {
+            get {
+                return ResourceManager.GetString("MyUserControl.TextBlock.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Current UI culture:.
         /// </summary>
         internal static string TextBlockCurrentUICulture {

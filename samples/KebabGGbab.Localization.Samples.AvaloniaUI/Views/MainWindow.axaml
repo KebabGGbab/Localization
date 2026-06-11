@@ -2,6 +2,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:views="using:KebabGGbab.Localization.Samples.AvaloniaUI.Views"
         xmlns:l="https://github.com/KebabGGbab"
         xmlns:vm="using:KebabGGbab.Localization.Samples.Shared.ViewModels"
         xmlns:dvm="using:KebabGGbab.Localization.Samples.Shared.ViewModels.Design"
@@ -12,8 +13,7 @@
         Title="{l:Localization MainWindowTitle}">
 
         <StackPanel Orientation="Vertical">
-
-        <Grid ColumnDefinitions="auto, 200" RowDefinitions="auto, auto">
+        <Grid DataContext="{Binding Path=Settings}" ColumnDefinitions="auto, 200" RowDefinitions="auto, auto, auto">
 
             <TextBlock Grid.Row="0" Grid.Column="0"
                         Text="{l:Localization TextBlockCurrentUICulture}" />
@@ -26,11 +26,14 @@
                         ItemsSource="{Binding Path=SupportedUICultures}"
                         SelectedItem="{Binding Path=SelectedUICulture}" />
 
-
+            <Button Grid.Row="2" Grid.ColumnSpan="2"
+                    Content="{l:Localization ButtonApply}"
+                    Command="{Binding Path=ChangeUICultureCommand}"
+                    CommandParameter="{Binding Path=SelectedUICulture}" />
         </Grid>
 
         <Button Content="{l:Localization ButtonApply}"
-                Command="{Binding Path=ChangeUICultureCommand}"
+        <views:MyUserControl />
                 CommandParameter="{Binding Path=SelectedUICulture}" />
 
     </StackPanel>
