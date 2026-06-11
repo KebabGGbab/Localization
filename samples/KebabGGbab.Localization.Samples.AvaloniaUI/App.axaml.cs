@@ -23,7 +23,7 @@ namespace KebabGGbab.Localization.Samples.AvaloniaUI
         private static void ConfigureServices(ServiceCollection services)
         {
             services.AddSingleton<MainWindow>();
-            services.AddSingleton<SettingsViewModel>();
+            services.AddViewModels();
             services.AddLocalizationWithResx();
         }
 
