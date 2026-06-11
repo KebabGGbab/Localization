@@ -1,0 +1,13 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:vm="using:KebabGGbab.Localization.Samples.Shared.ViewModels"
+                    xmlns:l="https://github.com/KebabGGbab">
+
+    <DataTemplate x:Key="UserName" x:DataType="vm:UserViewModel">
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="{l:Localization UserViewModel_UserName_Name}" />
+            <TextBlock Text="{Binding Path=Name}" />
+        </StackPanel>
+    </DataTemplate>
+
+</ResourceDictionary>

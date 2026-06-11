@@ -32,7 +32,7 @@
                     CommandParameter="{Binding Path=SelectedUICulture}" />
         </Grid>
 
-        <Button Content="{l:Localization ButtonApply}"
+        <ContentControl Content="{Binding Path=User}" ContentTemplate="{StaticResource UserName}" />
         <views:MyUserControl />
                 CommandParameter="{Binding Path=SelectedUICulture}" />
 
