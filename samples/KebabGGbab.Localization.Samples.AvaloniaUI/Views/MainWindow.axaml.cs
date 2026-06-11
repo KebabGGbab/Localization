@@ -2,7 +2,7 @@ namespace KebabGGbab.Localization.Samples.AvaloniaUI
 {
     public sealed partial class MainWindow : Window
     {
-        public MainWindow(MainViewModel vm)
+        public MainWindow(SettingsViewModel vm)
         {
             DataContext = vm;
             InitializeComponent();

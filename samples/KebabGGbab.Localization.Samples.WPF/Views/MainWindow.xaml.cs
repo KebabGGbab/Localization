@@ -8,7 +8,7 @@ namespace KebabGGbab.Localization.Samples.WPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow(MainViewModel vm)
+        public MainWindow(SettingsViewModel vm)
         {
             DataContext = vm;
             InitializeComponent();

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:KebabGGbab.Localization.Samples.WPF"
         xmlns:l="clr-namespace:KebabGGbab.Localization.WPF;assembly=KebabGGbab.Localization.WPF"
         xmlns:vm="clr-namespace:KebabGGbab.Localization.Samples.Shared.ViewModels;assembly=KebabGGbab.Localization.Samples.Shared" 
-        d:DataContext="{d:DesignInstance Type=vm:MainViewModel}"
+        d:DataContext="{d:DesignInstance Type=vm:SettingsViewModel}"
         mc:Ignorable="d"
         Title="{l:Localization MainWindowTitle}" Height="450" Width="800">
 
