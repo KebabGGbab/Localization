@@ -5,11 +5,11 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace KebabGGbab.Localization.AvaloniaUI
 {
-    public class Localization : MarkupExtension
+    public class LocalizationExtension : MarkupExtension
     {
         public required string Key { get; set; }
 
-        public Localization(string key)
+        public LocalizationExtension(string key)
         {
             ArgumentNullException.ThrowIfNull(key);
 
@@ -26,7 +26,7 @@ namespace KebabGGbab.Localization.AvaloniaUI
                 Path = nameof(LocalizationListener.Value),
                 UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged
             };
-            
+
             return binding;
         }
     }
