@@ -32,6 +32,8 @@
                     Command="{Binding Path=ChangeUICultureCommand}"
                     CommandParameter="{Binding Path=SelectedUICulture}" />
         </Grid>
+
+        <views:MyUserControl />
     </StackPanel>
 
 </Window>

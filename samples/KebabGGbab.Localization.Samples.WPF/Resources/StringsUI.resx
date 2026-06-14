@@ -123,6 +123,9 @@
   <data name="MainWindowTitle" xml:space="preserve">
     <value>Hello Window!</value>
   </data>
+  <data name="MyUserControl_TextBlock_Text" xml:space="preserve">
+    <value>MyUserControl is my user control</value>
+  </data>
   <data name="TextBlockCurrentUICulture" xml:space="preserve">
     <value>Current UI culture:</value>
   </data>
