@@ -35,6 +35,7 @@
 
         <views:MyUserControl />
         <ContentControl Content="{Binding Path=UserViewModel}" ContentTemplate="{StaticResource UserName}" />
+        <TextBlock Style="{StaticResource MyStyle}" />
     </StackPanel>
 
 </Window>

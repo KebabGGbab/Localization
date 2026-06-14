@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:l="clr-namespace:KebabGGbab.Localization.WPF;assembly=KebabGGbab.Localization.WPF">
+
+    <Style TargetType="{x:Type TextBlock}" x:Key="MyStyle">
+        <Setter Property="Text" Value="{l:Localization TextBlock_TestLocalization_Text}" />
+    </Style>
+    
+</ResourceDictionary>

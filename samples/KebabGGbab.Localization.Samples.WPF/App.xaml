@@ -5,7 +5,15 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
+               
+                <!-- Styles -->
+                
+                <ResourceDictionary Source="/Assets/Styles/TextBlock.xaml" />
+
+                <!-- DataTemplates -->
+                
                 <ResourceDictionary Source="/Assets/DataTemplates/UserViewModel.xaml" />
+                
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
