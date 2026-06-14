@@ -19,7 +19,7 @@ namespace KebabGGbab.Localization.Samples.WPF
         private static void ConfigureServices(ServiceCollection services)
         {
             services.AddSingleton<MainWindow>();
-            services.AddSingleton<SettingsViewModel>();
+            services.AddViewModels();
             services.AddLocalizationWithResx();
         }
 

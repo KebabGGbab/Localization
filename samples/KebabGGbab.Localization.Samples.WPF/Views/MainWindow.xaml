@@ -6,15 +6,16 @@
         xmlns:local="clr-namespace:KebabGGbab.Localization.Samples.WPF"
         xmlns:l="clr-namespace:KebabGGbab.Localization.WPF;assembly=KebabGGbab.Localization.WPF"
         xmlns:vm="clr-namespace:KebabGGbab.Localization.Samples.Shared.ViewModels;assembly=KebabGGbab.Localization.Samples.Shared" 
+        xmlns:views="clr-namespace:KebabGGbab.Localization.Samples.WPF.Views"
         xmlns:dvm="clr-namespace:KebabGGbab.Localization.Samples.Shared.ViewModels.Design;assembly=KebabGGbab.Localization.Samples.Shared"
-        d:DataContext="{d:DesignInstance Type=dvm:DesignSettingsViewModel}"
+        d:DataContext="{d:DesignInstance Type=dvm:DesignMainViewModel}"
         mc:Ignorable="d"
         Title="{l:Localization MainWindowTitle}" Height="450" Width="800">
 
-
     <StackPanel Orientation="Vertical">
 
-        <Grid ColumnDefinitions="auto, 200" RowDefinitions="auto, auto">
+        <Grid DataContext="{Binding Path=SettingsViewModel}" 
+              ColumnDefinitions="auto, 200" RowDefinitions="auto, auto, auto">
 
             <TextBlock Grid.Row="0" Grid.Column="0"
                         Text="{l:Localization TextBlockCurrentUICulture}" />
@@ -27,13 +28,10 @@
                         ItemsSource="{Binding Path=SupportedUICultures}"
                         SelectedItem="{Binding Path=SelectedUICulture}" />
 
-
+            <Button Grid.Row="2" Grid.ColumnSpan="2" Content="{l:Localization ButtonApply}"
+                    Command="{Binding Path=ChangeUICultureCommand}"
+                    CommandParameter="{Binding Path=SelectedUICulture}" />
         </Grid>
-
-        <Button Content="{l:Localization ButtonApply}"
-                Command="{Binding Path=ChangeUICultureCommand}"
-                CommandParameter="{Binding Path=SelectedUICulture}" />
-
     </StackPanel>
 
 </Window>

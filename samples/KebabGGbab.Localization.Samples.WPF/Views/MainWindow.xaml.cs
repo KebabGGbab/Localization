@@ -15,11 +15,11 @@ namespace KebabGGbab.Localization.Samples.WPF
                 throw new InvalidOperationException();
             }
 
-            DataContext = new DesignSettingsViewModel();
+            DataContext = new DesignMainViewModel();
             InitializeComponent();
         }
 
-        public MainWindow(SettingsViewModel vm)
+        public MainWindow(MainViewModel vm)
         {
             DataContext = vm;
             InitializeComponent();
