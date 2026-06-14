@@ -132,4 +132,7 @@
   <data name="TextBlockSelectedUICulture" xml:space="preserve">
     <value>Выбранная культура UI:</value>
   </data>
+  <data name="UserViewModel_UserName_Name" xml:space="preserve">
+    <value>Имя:</value>
+  </data>
 </root>

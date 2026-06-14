@@ -1,0 +1,13 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:vm="clr-namespace:KebabGGbab.Localization.Samples.Shared.ViewModels;assembly=KebabGGbab.Localization.Samples.Shared"
+                    xmlns:l="clr-namespace:KebabGGbab.Localization.WPF;assembly=KebabGGbab.Localization.WPF">
+
+    <DataTemplate x:Key="UserName" DataType="{x:Type vm:UserViewModel}">
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="{l:Localization UserViewModel_UserName_Name}" />
+            <TextBlock Text="{Binding Path=Name}" />
+        </StackPanel>
+    </DataTemplate>
+    
+</ResourceDictionary>

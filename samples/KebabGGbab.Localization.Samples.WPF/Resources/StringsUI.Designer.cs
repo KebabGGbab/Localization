@@ -104,5 +104,14 @@ namespace KebabGGbab.Localization.Samples.WPF.Resources {
                 return ResourceManager.GetString("TextBlockSelectedUICulture", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Name:.
+        /// </summary>
+        internal static string UserViewModel_UserName_Name {
+            get {
+                return ResourceManager.GetString("UserViewModel_UserName_Name", resourceCulture);
+            }
+        }
     }
 }

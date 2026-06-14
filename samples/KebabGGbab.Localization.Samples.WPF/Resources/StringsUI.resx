@@ -132,4 +132,7 @@
   <data name="TextBlockSelectedUICulture" xml:space="preserve">
     <value>Selected a UI culture:</value>
   </data>
+  <data name="UserViewModel_UserName_Name" xml:space="preserve">
+    <value>Name:</value>
+  </data>
 </root>

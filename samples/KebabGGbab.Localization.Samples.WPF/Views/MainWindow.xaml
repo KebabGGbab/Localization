@@ -34,6 +34,7 @@
         </Grid>
 
         <views:MyUserControl />
+        <ContentControl Content="{Binding Path=UserViewModel}" ContentTemplate="{StaticResource UserName}" />
     </StackPanel>
 
 </Window>
