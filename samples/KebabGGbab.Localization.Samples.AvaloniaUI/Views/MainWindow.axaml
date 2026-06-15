@@ -1,33 +1,34 @@
 <Window xmlns="https://github.com/avaloniaui"
+        xmlns:l="https://github.com/KebabGGbab"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:views="using:KebabGGbab.Localization.Samples.AvaloniaUI.Views"
-        xmlns:l="https://github.com/KebabGGbab"
         xmlns:vm="using:KebabGGbab.Localization.Samples.Shared.ViewModels"
         xmlns:dvm="using:KebabGGbab.Localization.Samples.Shared.ViewModels.Design"
         x:DataType="vm:MainViewModel"
         d:DataContext="dvm:DesignMainViewModel"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="KebabGGbab.Localization.Samples.AvaloniaUI.MainWindow"
-        Title="{l:Localization MainWindowTitle}">
+        Title="{l:Localization MainWindow_Title}">
 
     <StackPanel Orientation="Vertical">
-        <Grid DataContext="{Binding Path=Settings}" ColumnDefinitions="auto, 200" RowDefinitions="auto, auto, auto">
+        <Grid DataContext="{Binding Path=SettingsViewModel}" 
+              ColumnDefinitions="auto, 200" RowDefinitions="auto, auto, auto">
 
             <TextBlock Grid.Row="0" Grid.Column="0"
-                       Text="{l:Localization TextBlockCurrentUICulture}" />
+                       Text="{l:Localization MainWindow_Settings_CurrentUICulture}" />
             <TextBlock Grid.Row="0" Grid.Column="1"
                        Text="{Binding Path=CurrentUICulture}" />
 
             <TextBlock Grid.Row="1" Grid.Column="0"
-                       Text="{l:Localization TextBlockSelectedUICulture}" />
+                       Text="{l:Localization MainWindow_Settings_SelectedUICulture}" />
             <ComboBox Grid.Row="1" Grid.Column="1"
                       ItemsSource="{Binding Path=SupportedUICultures}"
                       SelectedItem="{Binding Path=SelectedUICulture}" />
 
             <Button Grid.Row="2" Grid.ColumnSpan="2"
-                    Content="{l:Localization ButtonApply}"
+                    Content="{l:Localization MainWindow_Settings_Apply}"
                     Command="{Binding Path=ChangeUICultureCommand}"
                     CommandParameter="{Binding Path=SelectedUICulture}" />
         </Grid>

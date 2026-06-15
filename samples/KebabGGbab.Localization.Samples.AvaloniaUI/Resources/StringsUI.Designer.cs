@@ -63,18 +63,36 @@ namespace KebabGGbab.Localization.Samples.AvaloniaUI.Resources {
         /// <summary>
         ///   Ищет локализованную строку, похожую на Apply.
         /// </summary>
-        internal static string ButtonApply {
+        internal static string MainWindow_Settings_Apply {
             get {
-                return ResourceManager.GetString("ButtonApply", resourceCulture);
+                return ResourceManager.GetString("MainWindow_Settings_Apply", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Current UI culture:.
+        /// </summary>
+        internal static string MainWindow_Settings_CurrentUICulture {
+            get {
+                return ResourceManager.GetString("MainWindow_Settings_CurrentUICulture", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Selected a UI culture:.
+        /// </summary>
+        internal static string MainWindow_Settings_SelectedUICulture {
+            get {
+                return ResourceManager.GetString("MainWindow_Settings_SelectedUICulture", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Ищет локализованную строку, похожую на Hello Window!.
         /// </summary>
-        internal static string MainWindowTitle {
+        internal static string MainWindow_Title {
             get {
-                return ResourceManager.GetString("MainWindowTitle", resourceCulture);
+                return ResourceManager.GetString("MainWindow_Title", resourceCulture);
             }
         }
         
@@ -83,7 +101,7 @@ namespace KebabGGbab.Localization.Samples.AvaloniaUI.Resources {
         /// </summary>
         internal static string MyUserControl_TextBlock_Text {
             get {
-                return ResourceManager.GetString("MyUserControl.TextBlock.Text", resourceCulture);
+                return ResourceManager.GetString("MyUserControl_TextBlock_Text", resourceCulture);
             }
         }
         
@@ -93,24 +111,6 @@ namespace KebabGGbab.Localization.Samples.AvaloniaUI.Resources {
         internal static string TextBlock_TestLocalization_Text {
             get {
                 return ResourceManager.GetString("TextBlock_TestLocalization_Text", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Ищет локализованную строку, похожую на Current UI culture:.
-        /// </summary>
-        internal static string TextBlockCurrentUICulture {
-            get {
-                return ResourceManager.GetString("TextBlockCurrentUICulture", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Ищет локализованную строку, похожую на Selected a UI culture:.
-        /// </summary>
-        internal static string TextBlockSelectedUICulture {
-            get {
-                return ResourceManager.GetString("TextBlockSelectedUICulture", resourceCulture);
             }
         }
         
