@@ -117,19 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ButtonApply" xml:space="preserve">
+  <data name="MainWindow_Settings_Apply" xml:space="preserve">
     <value>Apply</value>
   </data>
-  <data name="MainWindowTitle" xml:space="preserve">
+  <data name="MainWindow_Title" xml:space="preserve">
     <value>Hello Window!</value>
   </data>
   <data name="MyUserControl_TextBlock_Text" xml:space="preserve">
     <value>MyUserControl is my user control</value>
   </data>
-  <data name="TextBlockCurrentUICulture" xml:space="preserve">
+  <data name="MainWindow_Settings_CurrentUICulture" xml:space="preserve">
     <value>Current UI culture:</value>
   </data>
-  <data name="TextBlockSelectedUICulture" xml:space="preserve">
+  <data name="MainWindow_Settings_SelectedUICulture" xml:space="preserve">
     <value>Selected a UI culture:</value>
   </data>
   <data name="TextBlock_TestLocalization_Text" xml:space="preserve">

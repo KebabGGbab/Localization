@@ -10,7 +10,7 @@
         xmlns:dvm="clr-namespace:KebabGGbab.Localization.Samples.Shared.ViewModels.Design;assembly=KebabGGbab.Localization.Samples.Shared"
         d:DataContext="{d:DesignInstance Type=dvm:DesignMainViewModel}"
         mc:Ignorable="d"
-        Title="{l:Localization MainWindowTitle}" Height="450" Width="800">
+        Title="{l:Localization MainWindow_Title}" Height="450" Width="800">
 
     <StackPanel Orientation="Vertical">
 
@@ -18,17 +18,18 @@
               ColumnDefinitions="auto, 200" RowDefinitions="auto, auto, auto">
 
             <TextBlock Grid.Row="0" Grid.Column="0"
-                        Text="{l:Localization TextBlockCurrentUICulture}" />
+                        Text="{l:Localization MainWindow_Settings_CurrentUICulture}" />
             <TextBlock Grid.Row="0" Grid.Column="1"
                         Text="{Binding Path=CurrentUICulture}" />
 
             <TextBlock Grid.Row="1" Grid.Column="0"
-                        Text="{l:Localization TextBlockSelectedUICulture}" />
+                        Text="{l:Localization MainWindow_Settings_SelectedUICulture}" />
             <ComboBox Grid.Row="1" Grid.Column="1"
                         ItemsSource="{Binding Path=SupportedUICultures}"
                         SelectedItem="{Binding Path=SelectedUICulture}" />
 
-            <Button Grid.Row="2" Grid.ColumnSpan="2" Content="{l:Localization ButtonApply}"
+            <Button Grid.Row="2" Grid.ColumnSpan="2"
+                    Content="{l:Localization MainWindow_Settings_Apply}"
                     Command="{Binding Path=ChangeUICultureCommand}"
                     CommandParameter="{Binding Path=SelectedUICulture}" />
         </Grid>
@@ -36,6 +37,7 @@
         <views:MyUserControl />
         <ContentControl Content="{Binding Path=UserViewModel}" ContentTemplate="{StaticResource UserName}" />
         <TextBlock Style="{StaticResource MyStyle}" />
+
     </StackPanel>
 
 </Window>
