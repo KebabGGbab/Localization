@@ -19,7 +19,16 @@ namespace KebabGGbab.Localization.WPF
         public object Value 
         { 
             get;
-            set => SetProperty(ref field, value);
+            private set
+            {
+                if (field == value)
+                {
+                    return;
+                }
+
+                field = value;
+                OnPropertyChanged(nameof(Value));
+            }
         }
 
         public event PropertyChangedEventHandler? PropertyChanged;
@@ -57,30 +66,9 @@ namespace KebabGGbab.Localization.WPF
                 return string.Format(CultureInfo.InvariantCulture, _resourcePlaceholder, ex.Key);
             }
         }
-
-        private bool SetProperty<T>([NotNullIfNotNull(nameof(newValue))] ref T field, T newValue, [CallerMemberName] string? propertyName = null)
+        private void OnPropertyChanged(string propertyName)
         {
-            if (EqualityComparer<T>.Default.Equals(field, newValue))
-            {
-                return false;
-            }
-
-            field = newValue;
-            OnPropertyChanged(propertyName);
-
-            return true;
-        }
-
-        private void OnPropertyChanged([CallerMemberName] string? propertyName = null)
-        {
-            OnPropertyChanged(new PropertyChangedEventArgs(propertyName));
-        }
-
-        private void OnPropertyChanged(PropertyChangedEventArgs args)
-        {
-            ArgumentNullException.ThrowIfNull(args);
-
-            PropertyChanged?.Invoke(this, args);
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }
