@@ -10,11 +10,9 @@ using KebabGGbab.Localization.WPF.Resources;
 
 namespace KebabGGbab.Localization.WPF
 {
-    public sealed class LocalizationListener : INotifyPropertyChanged, IWeakEventListener, IDisposable
+    public sealed class LocalizationListener : INotifyPropertyChanged, IWeakEventListener
     {
         private static readonly CompositeFormat _resourcePlaceholder = CompositeFormat.Parse(Strings.LocalizationListenerPlaceholderFormat);
-
-        private bool _disposed;
 
         public string Key { get; }
 
@@ -83,31 +81,6 @@ namespace KebabGGbab.Localization.WPF
             ArgumentNullException.ThrowIfNull(args);
 
             PropertyChanged?.Invoke(this, args);
-        }
-
-        public void Dispose()
-        {
-            Dispose(true);
-            GC.SuppressFinalize(this);
-        }
-
-        private void Dispose(bool disposing)
-        {
-            if (_disposed)
-            {
-                return;
-            }
-             _disposed = true;
-
-            if (disposing)
-            {
-                CurrentUICultureChangedWeakEventManager.RemoveListener(LocalizationManager.Instance, this);
-            }
-        }
-
-        ~LocalizationListener()
-        {
-            Dispose(false);
         }
     }
 }
