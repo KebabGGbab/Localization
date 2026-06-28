@@ -123,6 +123,12 @@
   <data name="MainWindow_Title" xml:space="preserve">
     <value>Привет, окно!</value>
   </data>
+  <data name="MainWindow_Users_Add" xml:space="preserve">
+    <value>Добавить пользователя</value>
+  </data>
+  <data name="MainWindow_Users_Clear" xml:space="preserve">
+    <value>Очистить коллекцию</value>
+  </data>
   <data name="MyUserControl_TextBlock_Text" xml:space="preserve">
     <value>MyUserControl - это мой  пользовательский элемент</value>
   </data>

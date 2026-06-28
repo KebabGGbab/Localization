@@ -33,9 +33,24 @@
                     CommandParameter="{Binding Path=SelectedUICulture}" />
         </Grid>
 
-        <ContentControl Content="{Binding Path=User}" ContentTemplate="{StaticResource UserName}" />
         <views:MyUserControl />
         <TextBlock Classes="test-localization" />
+
+        <Grid DataContext="{Binding Path=UsersViewModel}"
+              ColumnDefinitions="auto, auto" RowDefinitions="200, auto">
+
+            <ListBox Grid.Row="0" Grid.ColumnSpan="2" 
+                     ItemsSource="{Binding Path=Users}" ItemTemplate="{StaticResource UserName}" />
+
+            <Button Grid.Row="1" Grid.Column="0"
+                    Content="{l:Localization MainWindow_Users_Add}"
+                    Command="{Binding Path=AddUserCommand}"/>
+
+            <Button Grid.Row="1" Grid.Column="1"
+                    Content="{l:Localization MainWindow_Users_Clear}"
+                    Command="{Binding Path=ClearUsersCommand}"/>
+
+        </Grid>
 
     </StackPanel>
 
