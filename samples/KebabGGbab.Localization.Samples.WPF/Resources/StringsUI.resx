@@ -123,6 +123,12 @@
   <data name="MainWindow_Title" xml:space="preserve">
     <value>Hello Window!</value>
   </data>
+  <data name="MainWindow_Users_Add" xml:space="preserve">
+    <value>Add user</value>
+  </data>
+  <data name="MainWindow_Users_Clear" xml:space="preserve">
+    <value>Clear users</value>
+  </data>
   <data name="MyUserControl_TextBlock_Text" xml:space="preserve">
     <value>MyUserControl is my user control</value>
   </data>

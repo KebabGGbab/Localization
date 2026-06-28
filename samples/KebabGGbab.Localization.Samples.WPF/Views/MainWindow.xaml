@@ -35,9 +35,22 @@
         </Grid>
 
         <views:MyUserControl />
-        <ContentControl Content="{Binding Path=UserViewModel}" ContentTemplate="{StaticResource UserName}" />
         <TextBlock Style="{StaticResource MyStyle}" />
 
+        <Grid DataContext="{Binding Path=UsersViewModel}"
+              ColumnDefinitions="auto, auto" RowDefinitions="200, auto">
+
+            <ListBox Grid.Row="0" Grid.ColumnSpan="2" 
+                     ItemsSource="{Binding Users}"
+                     ItemTemplate="{StaticResource UserName}" />
+
+            <Button Grid.Row="1" Grid.Column="0" 
+                    Command="{Binding Path=AddUserCommand}"
+                    Content="{l:Localization MainWindow_Users_Add}"/>
+            <Button Grid.Row="1" Grid.Column="1" 
+                    Command="{Binding Path=ClearUsersCommand}"
+                    Content="{l:Localization MainWindow_Users_Clear}"/>
+        </Grid>
     </StackPanel>
 
 </Window>
