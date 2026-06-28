@@ -7,10 +7,13 @@
         xmlns:vm="using:KebabGGbab.Localization.Samples.Shared.ViewModels"
         xmlns:dvm="using:KebabGGbab.Localization.Samples.Shared.ViewModels.Design"
         x:DataType="vm:MainViewModel"
-        d:DataContext="dvm:DesignMainViewModel"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="KebabGGbab.Localization.Samples.AvaloniaUI.MainWindow"
         Title="{l:Localization MainWindow_Title}">
+
+    <Design.DataContext>
+        <dvm:DesignMainViewModel />
+    </Design.DataContext>
 
     <StackPanel Orientation="Vertical">
         <Grid DataContext="{Binding Path=SettingsViewModel}" 

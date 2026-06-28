@@ -1,5 +1,3 @@
-using KebabGGbab.Localization.Samples.Shared.ViewModels.Design;
-
 namespace KebabGGbab.Localization.Samples.AvaloniaUI
 {
     public sealed partial class MainWindow : Window
@@ -12,7 +10,6 @@ namespace KebabGGbab.Localization.Samples.AvaloniaUI
                 throw new InvalidOperationException();
             }
 
-            DataContext = new DesignMainViewModel();
             InitializeComponent();
         }
 
