@@ -2,17 +2,17 @@
 {
     public class MainViewModel
     {
-        public SettingsViewModel Settings { get; }
+        public SettingsViewModel SettingsViewModel { get; }
 
-        public UserViewModel User { get; }
+        public UsersViewModel UsersViewModel { get; }
 
-        public MainViewModel(SettingsViewModel settings, UserViewModel user)
+        public MainViewModel(SettingsViewModel settings, UsersViewModel users)
         {
             ArgumentNullException.ThrowIfNull(settings);
-            ArgumentNullException.ThrowIfNull(user);
+            ArgumentNullException.ThrowIfNull(users);
 
-            Settings = settings;
-            User = user;
+            SettingsViewModel = settings;
+            UsersViewModel = users;
         }
     }
 }

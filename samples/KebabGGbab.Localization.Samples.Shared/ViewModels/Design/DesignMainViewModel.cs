@@ -2,7 +2,8 @@
 {
     public class DesignMainViewModel : MainViewModel
     {
-        public DesignMainViewModel() : base(new DesignSettingsViewModel(), new DesignUserViewModel())
+        public DesignMainViewModel() 
+            : base(new DesignSettingsViewModel(), new DesignUsersViewModel())
         {
         }
     }
