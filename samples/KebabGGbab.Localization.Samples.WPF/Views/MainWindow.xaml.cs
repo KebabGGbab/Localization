@@ -1,7 +1,6 @@
 ﻿using System.ComponentModel;
 using System.Windows;
 using KebabGGbab.Localization.Samples.Shared.ViewModels;
-using KebabGGbab.Localization.Samples.Shared.ViewModels.Design;
 
 namespace KebabGGbab.Localization.Samples.WPF
 {
@@ -15,7 +14,6 @@ namespace KebabGGbab.Localization.Samples.WPF
                 throw new InvalidOperationException();
             }
 
-            DataContext = new DesignMainViewModel();
             InitializeComponent();
         }
 
