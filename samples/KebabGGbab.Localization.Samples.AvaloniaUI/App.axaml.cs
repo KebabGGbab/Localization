@@ -37,14 +37,9 @@ namespace KebabGGbab.Localization.Samples.AvaloniaUI
         {
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
             {
-                if (Design.IsDesignMode)
-                {
-                    desktop.MainWindow = new MainWindow();
-
-                    return;
-                }
-
-                desktop.MainWindow = _serviceProvider.GetRequiredService<MainWindow>();
+                desktop.MainWindow = Design.IsDesignMode
+                    ? new MainWindow()
+                    : _serviceProvider.GetRequiredService<MainWindow>();
             }
 
             base.OnFrameworkInitializationCompleted();
